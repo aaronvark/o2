@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		877A6CD41DAD316D0098625A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 877A6CD31DAD316D0098625A /* main.c */; };
+		877A6CF21DAD36620098625A /* o2.c in Sources */ = {isa = PBXBuildFile; fileRef = 877A6CDC1DAD36620098625A /* o2.c */; };
+		877A6CF31DAD36620098625A /* o2_socket.c in Sources */ = {isa = PBXBuildFile; fileRef = 877A6CDD1DAD36620098625A /* o2_socket.c */; };
+		877A6CF41DAD36620098625A /* o2_send.c in Sources */ = {isa = PBXBuildFile; fileRef = 877A6CDE1DAD36620098625A /* o2_send.c */; };
+		877A6CF51DAD36620098625A /* o2_message.c in Sources */ = {isa = PBXBuildFile; fileRef = 877A6CDF1DAD36620098625A /* o2_message.c */; };
+		877A6CF61DAD36620098625A /* o2_search.c in Sources */ = {isa = PBXBuildFile; fileRef = 877A6CE51DAD36620098625A /* o2_search.c */; };
+		877A6CF71DAD36620098625A /* o2_sched.c in Sources */ = {isa = PBXBuildFile; fileRef = 877A6CE71DAD36620098625A /* o2_sched.c */; };
+		877A6CF81DAD36620098625A /* o2_interoperation.c in Sources */ = {isa = PBXBuildFile; fileRef = 877A6CE91DAD36620098625A /* o2_interoperation.c */; };
+		877A6CF91DAD36620098625A /* o2_dynamic.c in Sources */ = {isa = PBXBuildFile; fileRef = 877A6CEC1DAD36620098625A /* o2_dynamic.c */; };
+		877A6CFA1DAD36620098625A /* o2_discovery.c in Sources */ = {isa = PBXBuildFile; fileRef = 877A6CEE1DAD36620098625A /* o2_discovery.c */; };
+		877A6CFB1DAD36620098625A /* o2_debug.c in Sources */ = {isa = PBXBuildFile; fileRef = 877A6CF01DAD36620098625A /* o2_debug.c */; };
+		877A6CFC1DAD36620098625A /* o2_clock.c in Sources */ = {isa = PBXBuildFile; fileRef = 877A6CF11DAD36620098625A /* o2_clock.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +36,29 @@
 /* Begin PBXFileReference section */
 		877A6CD01DAD316D0098625A /* o2_test_forked */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = o2_test_forked; sourceTree = BUILT_PRODUCTS_DIR; };
 		877A6CD31DAD316D0098625A /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		877A6CDB1DAD36620098625A /* o2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = o2.h; path = src/o2.h; sourceTree = "<group>"; };
+		877A6CDC1DAD36620098625A /* o2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = o2.c; path = src/o2.c; sourceTree = "<group>"; };
+		877A6CDD1DAD36620098625A /* o2_socket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = o2_socket.c; path = src/o2_socket.c; sourceTree = "<group>"; };
+		877A6CDE1DAD36620098625A /* o2_send.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = o2_send.c; path = src/o2_send.c; sourceTree = "<group>"; };
+		877A6CDF1DAD36620098625A /* o2_message.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = o2_message.c; path = src/o2_message.c; sourceTree = "<group>"; };
+		877A6CE01DAD36620098625A /* o2_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = o2_internal.h; path = src/o2_internal.h; sourceTree = "<group>"; };
+		877A6CE11DAD36620098625A /* o2_clock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = o2_clock.h; path = src/o2_clock.h; sourceTree = "<group>"; };
+		877A6CE21DAD36620098625A /* o2_socket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = o2_socket.h; path = src/o2_socket.h; sourceTree = "<group>"; };
+		877A6CE31DAD36620098625A /* o2_send.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = o2_send.h; path = src/o2_send.h; sourceTree = "<group>"; };
+		877A6CE41DAD36620098625A /* o2_search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = o2_search.h; path = src/o2_search.h; sourceTree = "<group>"; };
+		877A6CE51DAD36620098625A /* o2_search.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = o2_search.c; path = src/o2_search.c; sourceTree = "<group>"; };
+		877A6CE61DAD36620098625A /* o2_sched.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = o2_sched.h; path = src/o2_sched.h; sourceTree = "<group>"; };
+		877A6CE71DAD36620098625A /* o2_sched.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = o2_sched.c; path = src/o2_sched.c; sourceTree = "<group>"; };
+		877A6CE81DAD36620098625A /* o2_message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = o2_message.h; path = src/o2_message.h; sourceTree = "<group>"; };
+		877A6CE91DAD36620098625A /* o2_interoperation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = o2_interoperation.c; path = src/o2_interoperation.c; sourceTree = "<group>"; };
+		877A6CEA1DAD36620098625A /* o2_error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = o2_error.h; path = src/o2_error.h; sourceTree = "<group>"; };
+		877A6CEB1DAD36620098625A /* o2_dynamic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = o2_dynamic.h; path = src/o2_dynamic.h; sourceTree = "<group>"; };
+		877A6CEC1DAD36620098625A /* o2_dynamic.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = o2_dynamic.c; path = src/o2_dynamic.c; sourceTree = "<group>"; };
+		877A6CED1DAD36620098625A /* o2_discovery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = o2_discovery.h; path = src/o2_discovery.h; sourceTree = "<group>"; };
+		877A6CEE1DAD36620098625A /* o2_discovery.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = o2_discovery.c; path = src/o2_discovery.c; sourceTree = "<group>"; };
+		877A6CEF1DAD36620098625A /* o2_debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = o2_debug.h; path = src/o2_debug.h; sourceTree = "<group>"; };
+		877A6CF01DAD36620098625A /* o2_debug.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = o2_debug.c; path = src/o2_debug.c; sourceTree = "<group>"; };
+		877A6CF11DAD36620098625A /* o2_clock.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = o2_clock.c; path = src/o2_clock.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +75,7 @@
 		877A6CC71DAD316D0098625A = {
 			isa = PBXGroup;
 			children = (
+				877A6CDA1DAD365A0098625A /* scr */,
 				877A6CD21DAD316D0098625A /* o2_test_forked */,
 				877A6CD11DAD316D0098625A /* Products */,
 			);
@@ -60,6 +95,36 @@
 				877A6CD31DAD316D0098625A /* main.c */,
 			);
 			path = o2_test_forked;
+			sourceTree = "<group>";
+		};
+		877A6CDA1DAD365A0098625A /* scr */ = {
+			isa = PBXGroup;
+			children = (
+				877A6CDB1DAD36620098625A /* o2.h */,
+				877A6CDC1DAD36620098625A /* o2.c */,
+				877A6CDD1DAD36620098625A /* o2_socket.c */,
+				877A6CDE1DAD36620098625A /* o2_send.c */,
+				877A6CDF1DAD36620098625A /* o2_message.c */,
+				877A6CE01DAD36620098625A /* o2_internal.h */,
+				877A6CE11DAD36620098625A /* o2_clock.h */,
+				877A6CE21DAD36620098625A /* o2_socket.h */,
+				877A6CE31DAD36620098625A /* o2_send.h */,
+				877A6CE41DAD36620098625A /* o2_search.h */,
+				877A6CE51DAD36620098625A /* o2_search.c */,
+				877A6CE61DAD36620098625A /* o2_sched.h */,
+				877A6CE71DAD36620098625A /* o2_sched.c */,
+				877A6CE81DAD36620098625A /* o2_message.h */,
+				877A6CE91DAD36620098625A /* o2_interoperation.c */,
+				877A6CEA1DAD36620098625A /* o2_error.h */,
+				877A6CEB1DAD36620098625A /* o2_dynamic.h */,
+				877A6CEC1DAD36620098625A /* o2_dynamic.c */,
+				877A6CED1DAD36620098625A /* o2_discovery.h */,
+				877A6CEE1DAD36620098625A /* o2_discovery.c */,
+				877A6CEF1DAD36620098625A /* o2_debug.h */,
+				877A6CF01DAD36620098625A /* o2_debug.c */,
+				877A6CF11DAD36620098625A /* o2_clock.c */,
+			);
+			name = scr;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +183,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				877A6CFB1DAD36620098625A /* o2_debug.c in Sources */,
+				877A6CF41DAD36620098625A /* o2_send.c in Sources */,
+				877A6CF51DAD36620098625A /* o2_message.c in Sources */,
+				877A6CF71DAD36620098625A /* o2_sched.c in Sources */,
+				877A6CF91DAD36620098625A /* o2_dynamic.c in Sources */,
+				877A6CF21DAD36620098625A /* o2.c in Sources */,
+				877A6CF31DAD36620098625A /* o2_socket.c in Sources */,
+				877A6CFC1DAD36620098625A /* o2_clock.c in Sources */,
+				877A6CF61DAD36620098625A /* o2_search.c in Sources */,
+				877A6CFA1DAD36620098625A /* o2_discovery.c in Sources */,
 				877A6CD41DAD316D0098625A /* main.c in Sources */,
+				877A6CF81DAD36620098625A /* o2_interoperation.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +315,7 @@
 				877A6CD91DAD316D0098625A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
