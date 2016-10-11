@@ -138,7 +138,7 @@ Some major components and concepts of O2 are the following:
 /// information by setting o2_debug to 1 for basic connection
 /// data, 2 for tracing user messages sent and received, and 3
 /// for tracing clock-sync and (perhaps) discovery messages.
-int o2_debug;
+extern int o2_debug;
 
 /** @} */
 

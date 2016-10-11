@@ -111,7 +111,7 @@ number. The remaining arguments are service names.
 #endif
 
 char *debug_prefix = NULL;
-int o2_debug = 0;
+extern int o2_debug = 0;
 
 void *((*o2_malloc)(size_t size)) = &malloc;
 void ((*o2_free)(void *)) = &free;

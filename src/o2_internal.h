@@ -173,7 +173,7 @@ void o2_sched_init();
 // used by o2_get_next() for storage when parameters are coerced.
 // Used in dispatch code (o2_search.c) to detect when coercion
 // has taken place.
-o2_arg o2_coerced_value;
+extern o2_arg o2_coerced_value;
 
 #endif /* O2_INTERNAL_H */
 /// \endcond

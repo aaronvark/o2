@@ -35,7 +35,6 @@
 int initWSock();
 #endif
 
-
 generic_entry_ptr o2_find_service(const char *service_name)
 {
     // all callers are passing in (possibly) unaligned strings, so we

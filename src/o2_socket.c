@@ -35,7 +35,7 @@ SOCKET local_send_sock = INVALID_SOCKET; // socket for sending all UDP msgs
 dyn_array o2_fds; ///< pre-constructed fds parameter for poll()
 dyn_array o2_fds_info; ///< info about sockets
 
-process_info o2_process; ///< the process descriptor for this process
+//extern process_info o2_process; ///< the process descriptor for this process
 
 int o2_found_network = FALSE;
 
@@ -238,17 +238,37 @@ int read_whole_message(SOCKET sock, struct fds_info *info)
         int n = recvfrom(sock, ((char *) &(info->length)) + info->length_got,
                          4 - info->length_got, 0, NULL, NULL);
         if (n <= 0) { /* error: close the socket */
-			if ((errno != EAGAIN && errno != EINTR) || (GetLastError() != WSAEWOULDBLOCK && GetLastError() != WSAEINTR)) {
-				if (errno == ECONNRESET || GetLastError() == WSAECONNRESET){
-					return O2_TCP_HUP;
-				}
-				else {
-					perror("recvfrom in read_whole_message getting length");
-					tcp_message_cleanup(info);
-					return O2_FAIL;
-				}
+            
+            //BEGIN EDIT
+            //Updated this to have split functionality on win32, because it wouldn't compile due to the use of win32 variables/functions
+            // - Aaron Oostdijk
+#ifndef WIN32
+            if ((errno != EAGAIN && errno != EINTR)) {
+                if (errno == ECONNRESET) {
+                    return O2_TCP_HUP;
+                }
+                else {
+                    perror("recvfrom in read_whole_message getting length");
+                    tcp_message_cleanup(info);
+                    return O2_FAIL;
+                }
             }
-		}
+#else
+            if ((GetLastError() != WSAEWOULDBLOCK && GetLastError() != WSAEINTR)) {
+                if (GetLastError() == WSAECONNRESET){
+                    return O2_TCP_HUP;
+                }
+                else {
+                    perror("recvfrom in read_whole_message getting length");
+                    tcp_message_cleanup(info);
+                    return O2_FAIL;
+                }
+            }
+#endif
+            //END EDIT
+            
+        }
+
         info->length_got += n;
         assert(info->length_got < 5);
         if (info->length_got < 4) {
